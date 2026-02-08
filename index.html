@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>the things i see at night cant hurt me</title>
+</head>
+
+<style>
+    body{background:black ;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+    margin-top: 2%;
+    text-align: center;
+}
+
+
+.core{
+
+    width: 800px;
+    margin-left: 10%;
+    margin-top: 6%;
+    display: inline-flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.button{
+    background-color: black;
+    font-size: 50px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+  
+}
+.left{
+    border-style: double;
+    border-color: white;
+    border-width: 10px;
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 300px;
+    height: 500px;
+    float: left;
+    padding: 1%;
+}
+
+.right{
+    border-style: double;
+    border-color: white;
+    border-width: 10px;
+    margin-top: 13%;
+    margin-right: 2%;
+    width: 300px;
+    height: 500px;
+    float: right;
+    padding: 1%;
+    text-align: right;
+}
+
+#overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Image styling */
+        #overlay img {
+            max-width: 800px;
+            max-height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px black;
+        }
+
+.image-title{
+
+    font-size: 50px;
+    cursor: pointer;
+}
+</style>
+
+
+
+<body>
+        <div class="header">
+            <h1>the things I see at night still scare me</h1>
+            <p >but now I know they cant hurt me</p>
+        </div>
+    <div class="core">
+        <img src="img/home.gif">
+        
+    </div>
+
+
+    </div>
+
+    <div class="right">
+        <h1>an expanding collection of hallucinations and nightmares given form in order for me to send them off
+        </h1>
+
+    </div>
+
+    <div class="left">
+        <div>
+        <h1 class="image-title" onclick="showImage('mirror.png')">mirror</h1>
+        <h1 class="image-title" onclick="showImage('eye.gif')">eye</h1>
+        <h1 class="image-title" onclick="showImage('room.png')">room</h1>
+        <h1 class="image-title" onclick="showImage('bath.png')">bathroom</h1>
+        <h1 class="image-title" onclick="showImage('door.png')">door</h1>
+    </div>
+
+    <!-- Popup container -->
+    <div id="overlay" onclick="hideImage()">
+        <img id="popupImage" src="" alt="Popup image">
+    </div>
+
+    <script>
+        // Function to show the clicked image in the popup
+        function showImage(imageSrc) {
+            document.getElementById('popupImage').src = imageSrc;
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        // Function to hide the popup
+        function hideImage() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+
+</div>
+
+</body>
+
+</html>
